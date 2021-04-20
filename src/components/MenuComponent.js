@@ -50,7 +50,7 @@ function MenuComponent() {
                     <Media left middle>
                         <Media object src={dish.image} alt={dish.name}/>
                     </Media>
-                    <Media body className="mt-5 item">
+                    <Media body className="ml-5 item">
                         <Media heading>{dish.name}</Media>
                         <p>{dish.description}</p>
                     </Media>
