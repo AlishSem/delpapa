@@ -6,7 +6,7 @@ function DishdetailComponent({dish}) {
     if (dish != null) {
     let comments = dish.comments.map(comment => {
         return (
-            <div key = {comment.id}>
+            <div key = {comment.id} class = "comment">
                 <p>{comment.comment}</p>
                 <p> -- {comment.author}</p>
             </div>
@@ -18,6 +18,9 @@ function DishdetailComponent({dish}) {
             <Card>
                 <CardImg width="100%" src={dish.image} alt={dish.name} />
                 <CardBody>
+                    <CardTitle>
+                        {dish.name}
+                    </CardTitle>
                     <CardText>
                         {dish.description}
                     </CardText>
