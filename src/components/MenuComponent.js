@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from "reactstrap"
 import { useState } from 'react'
 import { render } from '@testing-library/react'
+import DishdetailComponent from './DishdetailComponent'
 
 
 function MenuComponent({dishes}) {
@@ -19,8 +20,7 @@ function MenuComponent({dishes}) {
                     <CardText>{dish.description}</CardText>
                 </CardBody>
             </Card>
-            )
-        }
+            )}
         else {
             return(
                 <div></div>
@@ -43,10 +43,10 @@ function MenuComponent({dishes}) {
     return (
         <div className="container">
             <div className="row">
-                    {menu}
+                {menu}
             </div>
             <div className="row">
-                {renderDish(selectedDish)}
+                <DishdetailComponent dish = {selectedDish}/>
             </div>
         </div>
     )
