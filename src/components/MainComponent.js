@@ -12,6 +12,7 @@ import FooterComponent from './FooterComponent'
 import HomeComponent from './HomeComponent'
 import { Switch, Route, Redirect} from 'react-router-dom'
 import ContactComponent from './ContactComponent'
+import AboutComponent from './AboutComponent'
 
 function MainComponent() {
     const [dishes, setDishes] = useState(DISHES)
@@ -41,6 +42,7 @@ function MainComponent() {
                 <Route exact path="/menu" component={() => <MenuComponent dishes={dishes}/>}/>
                 <Route path = "/menu/:dishId" component={DishWithId}/>
                 <Route exact path="/contactus" component={ContactComponent}/>
+                <Route exact path="/aboutus" component={() => <AboutComponent leaders = {leaders}/>}/>
                 <Redirect to="/home"/>
             </Switch>
             <FooterComponent/>
