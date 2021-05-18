@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 
 function AboutComponent({leaders}) {
 
+    const imgStyle = {
+        maxHeight: 128,
+        maxWidth: 128
+    }
 
 
     function RenderLeader({leader}) {
@@ -11,7 +15,7 @@ function AboutComponent({leaders}) {
             <div key={leader.id} className="col-12 mt-5">
                 <Media tag="li">
                     <Media left middle>
-                        <Media object src={leader.image} alt={leader.name} />
+                        <Media object src={leader.image} alt={leader.name} style={imgStyle} />
                     </Media>
                     <Media body className="ml-5">
                         <Media heading>{leader.name}</Media>
